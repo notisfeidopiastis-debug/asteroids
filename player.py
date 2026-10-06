@@ -5,6 +5,7 @@ from shot import Shot
 
 
 
+
 class Player(CircleShape):
     def __init__(self,x,y,):
         super().__init__(x, y, PLAYER_RADIUS)
@@ -31,7 +32,7 @@ class Player(CircleShape):
             self.move(dt)
         if keys[pygame.K_DOWN]:
             self.move(-dt)
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_z]:
             if self.cooldown <=0:
                 self.shoot()
                 self.cooldown = PLAYER_SHOOT_COOLDOWN_SECONDS
